@@ -19,7 +19,10 @@
             width: var(--base);
             height: calc( var(--base) * 2/3 ); 
             background: center / contain no-repeat url(./marka_korabl.jpg);  
-            margin-left: 20px;             
+            margin: 100px 50px; 
+            
+            transform: scale(var(--scale)) translate3d(var(--trX), var(--trY), 0) rotate(var(--rotation));
+            transition: all 0.5s ease-in;
         }
     </style>
 </head>
@@ -27,16 +30,17 @@
     <main>
         <h1>Transformator</h1>
 
-        <div class="controls">
-            <button class="scale">scale</button>
+        <div class="controls">            
             <button class="rotate">rotate</button>
             <button class="movex">move X</button>
             <button class="movey">move Y</button>
+            <button class="scale">scale</button>
         </div>
 
         <div class='transformer'>
             <!-- <img src="./marka_korabl.jpg" alt="mark"> -->
         </div>
     </main>
+    <script src="script.js"></script>
 </body>
 </html>
